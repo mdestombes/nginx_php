@@ -40,6 +40,9 @@ cp /home/web/private/config/www.php.conf /etc/php/7.0/fpm/pool.d/www.conf
 # Give acces R/W to web directoty
 chown www-data:www-data -R /home/web
 
+# Give acces R/W to web directoty
+chown www-data:www-data -R /home/web
+
 # Start web service
 echo "[Web service start]"
 service nginx start
