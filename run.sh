@@ -22,6 +22,9 @@ if [ ! -d /home/config/log ]; then
 	[ ! -f /home/web/error.html ] && cp /home/config/error.html /home/web/error.html
 fi
 
+# Give acces R/W to web directoty
+chown www-data:www-data -R /home/web
+
 # Start web service
 echo "[Web service start]"
 service nginx start
