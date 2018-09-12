@@ -23,17 +23,16 @@ COPY index.php /home/config/index.php
 COPY error.html /home/config/error.html
 
 WORKDIR /home/web/
-RUN chown www-data:www-data -R /home/web
 
 # Add to sudo group
 RUN usermod -a -G www-data nginx
 
 # NGINX Configuration
-COPY nginx.default.conf /etc/nginx/conf.d/default.conf
+COPY nginx.default.conf /home/config/nginx.default.conf
 
 # PHP Configuration
-COPY www.php.ini /etc/php/7.0/fpm/php.ini
-COPY www.php.conf /etc/php/7.0/fpm/pool.d/www.conf
+COPY www.php.ini /home/config/www.php.ini
+COPY www.php.conf /home/config/www.php.conf
 
 EXPOSE 80
 
