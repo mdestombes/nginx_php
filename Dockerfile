@@ -23,7 +23,6 @@ COPY index.php /home/config/index.php
 COPY error.html /home/config/error.html
 
 WORKDIR /home/web/
-RUN chown www-data:www-data -R /home/web
 
 # Add to sudo group
 RUN usermod -a -G www-data nginx
