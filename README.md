@@ -30,6 +30,10 @@ Time Zone : Set the container timezone (for crontab). (You can get your timezone
 
 ## Volumes
 + __/home/web__: Working directory
++ __/home/web/public__: Root directory available by web page
++ __/home/web/private__: Directory not available by web page
++ __/home/web/private/config__: NGINH and PHP config files directory
++ __/home/web/private/log__: Log directory for Web server
 
 ---
 
@@ -45,3 +49,7 @@ Time Zone : Set the container timezone (for crontab). (You can get your timezone
 ## Changelog
 + 1.0:
   - Initial image
++ 2.0:
+  - Add public/private directory from working directory
+  - Auto update config files with private/config files at start
+  - Moving log directory to private/log
