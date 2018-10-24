@@ -53,3 +53,6 @@ Time Zone : Set the container timezone (for crontab). (You can get your timezone
   - Add public/private directory from working directory
   - Auto update config files with private/config files at start
   - Moving log directory to private/log
++ 2.1:
+  - Add cron
+  - Add logrotate on private/log

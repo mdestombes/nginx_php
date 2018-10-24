@@ -6,6 +6,8 @@ MAINTAINER mdestombes
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
+    	cron \
+    	logrotate \
         nano \
         php-fpm \
         && \
@@ -21,6 +23,9 @@ RUN chmod 777 /home/config/run.sh
 # Copy basic install
 COPY index.php /home/config/index.php
 COPY error.html /home/config/error.html
+
+# Copy basic logrotate configuration
+COPY logrotate /home/config/logrotate
 
 WORKDIR /home/web/
 
